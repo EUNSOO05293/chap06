@@ -7,4 +7,33 @@
  작성자: 이은수
  날짜: 2025.05.20
  버전 : v0.1
-*/
+ */
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void graph(int rnum) 
+{
+	int i;
+
+	for (i = 0; i < rnum / 100; i++) {
+		printf("*");
+	}
+}
+
+int main() 
+{
+	int i, rnum;
+	srand((unsigned int)time(NULL));
+
+	for (i = 0; i < 3; i++) {
+		rnum = rand() % 10000;
+		printf("%d:", rnum);
+		graph(rnum);
+		printf("\n");
+	}
+
+}
+
